@@ -1,0 +1,16 @@
+<header>
+    <h4>Angular | Writeable Signals</h4>
+    <p>Taking a look into Writeable Signals and how to set and update them.</p>
+</header>
+
+<section>
+    <h4>Getting a value from a Writeable Signal</h4>
+    <p>firstSignal Value: <span>{{firstSignal()}}</span></p>
+    <p>secondSignal Value: <span>{{secondSignal()}}</span></p>
+</section>
+
+<section>
+    <h4>Modifying a Writeable Signal</h4>
+    <button (click)="setSignal()">Set New Value to the firstSignal</button>
+    <button (click)="updateSignal()">Update secondSignal with +1</button>
+</section>

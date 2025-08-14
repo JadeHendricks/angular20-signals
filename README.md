@@ -1,56 +1,59 @@
-# Modern Angular with Signals: The Missing Guide
+# NgSignals
 
-A focused deep-dive into modern Angular development powered by **Signals**, illuminating the latest features, best practices, and architectural evolution shaping Angular 19–20.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 
----
+## Development server
 
-## What’s Inside
+To start a local development server, run:
 
-- **Understanding Signals**
-  - Learn why Angular is shifting toward *zoneless change detection* using signals.
-  - Explore core primitives: writable signals, computed signals, effects, and their interplay with dependency injection.
-  - Discover advanced APIs like `linkedSignal`, and underpinning implementation details that empower more predictable reactivity.
+```bash
+ng serve
+```
 
-- **Modern Component Design**
-  - Integrate signals directly into Angular components to enhance performance and reduce complexity.
-  - Embrace the standalone architecture and functional component APIs—moving beyond decorators.
-  - Understand how Angular 18’s signal-based component API elevates maintainability in modern apps.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-- **Signal-Based Services**
-  - Build reactive services using signal patterns.
-  - Work with `resource` and `rxResource` APIs introduced in Angular 19.
-  - Learn to fetch, cache, and react to HTTP and WebSocket data streams—optimized for Angular 20’s resource APIs.  
-  :contentReference[oaicite:1]{index=1}
+## Code scaffolding
 
----
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-## Tools & Technologies Covered
+```bash
+ng generate component component-name
+```
 
-- **Angular Versions**: Deep compatibility with Angular 18, 19, and 20.
-- **Signal APIs**: Writable, computed, effects, and `linkedSignal`.
-- **Architectural Patterns**:
-  - Standalone components
-  - Zoneless change detection
-- **Data Handling**:
-  - Signal-based services
-  - Resource and rxResource APIs (incl. WebSocket streaming)  
-  :contentReference[oaicite:2]{index=2}
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
----
+```bash
+ng generate --help
+```
 
-## Who This Is For
+## Building
 
-- Angular developers seeking to adopt the *new reactive paradigm* featured in Angular 19–20.
-- Users familiar with traditional RxJS-based architecture looking to transition to signal-driven patterns.
-- Developers interested in optimizing change detection, wiring cleaner components, and leveraging the latest Angular tooling.  
-  :contentReference[oaicite:3]{index=3}
+To build the project run:
 
----
+```bash
+ng build
+```
 
-## Why It Stands Out
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-- Helps you understand *why* Angular is moving toward a zoneless, signal-centric architecture.
-- Enables building components and services with simpler, more intuitive reactive flows.
-- Equips you with practical strategies for working with signals—and avoiding common pitfalls—through real-world patterns and examples.
+## Running unit tests
 
----
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

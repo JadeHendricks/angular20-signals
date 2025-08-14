@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  box-sizing: border-box;
+  background-color: #e3e3e3;
+}
+
+span {
+    color:royalblue;
+    font-weight: bold;
+}
+
+nav {
+    background-color: white;
+    padding: 10px 0;
+    h1 {
+        font-size: 18px;
+    }
+    ul {
+        list-style: none;
+        gap: 20px;
+        display: flex;
+        li {
+            font-size: 14px;
+        }
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 40px 0 20px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+button {
+    border: 0;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: royalblue;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
