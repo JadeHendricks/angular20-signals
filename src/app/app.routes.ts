@@ -12,5 +12,11 @@ export const routes: Routes = [
         loadComponent: () => 
             import('./components/computed-signal/computed-signal-example/computed-signal-example.component')
             .then(c => c.ComputedSignalExampleComponent)
+    },
+    {
+        path: 'effect',
+        loadComponent: () => 
+            import('./components/effect/effect-example/effect-example.component')
+            .then(c => c.EffectExampleComponent)
     }
 ];
