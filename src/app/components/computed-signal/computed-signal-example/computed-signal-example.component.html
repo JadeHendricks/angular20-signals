@@ -1,0 +1,16 @@
+<header>
+    <h4>Angular | Computed Signals</h4>
+    <p>Taking a look into Computed Signals and how to use them.</p>
+</header>
+
+<section>
+    <h4>Calling a Computed signal With Two Signals</h4>
+    <p>computedSignalWithTwoSignals: {{computedSignalWithTwoSignals()}}</p>
+</section>
+
+<section>
+    <h4>Updating one signal to show how computed reacts to signal changes, that it holds.</h4>
+    <p>thirdSignal: {{thirdSignal()}}</p>
+    <p>computedSignalUpdates (thirdSignal * 2): {{computedSignalUpdates()}}</p>
+    <button (click)="updatingThirdSignal()">Increment Signal Three</button>
+</section>

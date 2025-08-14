@@ -6,5 +6,11 @@ export const routes: Routes = [
         loadComponent: () => 
             import('./components/writeable-signal/writeable-signal-example/writeable-signal-example.component')
             .then(c => c.WriteableSignalExampleComponent)
+    },
+    {
+        path: 'computed-signal',
+        loadComponent: () => 
+            import('./components/computed-signal/computed-signal-example/computed-signal-example.component')
+            .then(c => c.ComputedSignalExampleComponent)
     }
 ];
