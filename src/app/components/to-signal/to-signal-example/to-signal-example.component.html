@@ -1,1 +1,30 @@
-<p>to-signal-example works!</p>
+<header>
+    <h4>Angular | toSignal Demo</h4>
+    <p>Converting Observables into Signals you can call in the template.</p>
+</header>
+
+<section>
+    <h4>Converting a Live Clock time to a signal(timer → toSignal)</h4>
+    <p>Every time the observable emits a value, our signal updates and the UI reflects the change.</p>
+    <p>The observable subscription is cleaned up automatically when the component is destroyed. (no memory leaks).</p>
+    <p>Current time: <strong>{{ timeSignal() }}</strong></p>
+</section>
+
+<section>
+<h4>Switching API calls with toSignal + .next()</h4>
+<p>Each time a request is triggered, the HTTP response is converted into a signal, which we can use directly in the template.</p>
+<p>The observable subscription is automatically torn down when the component is destroyed.</p>
+
+<button (click)="loadPosts()">Load Posts</button>
+<button (click)="loadUsers()">Load Users</button>
+
+<p *ngIf="data().length === 0">No data yet. Click a button 👆</p>
+
+<ul>
+  <li *ngFor="let item of data()">
+    <!-- posts have title, users have name -->
+    {{ item | json }}
+  </li>
+</ul>
+
+</section>

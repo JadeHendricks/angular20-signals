@@ -24,5 +24,11 @@ export const routes: Routes = [
         loadComponent: () => 
             import('./components/linked-signal/linked-signal-example/linked-signal-example.component')
             .then(c => c.LinkedSignalExampleComponent)
+    },
+    {
+        path: 'to-signal',
+        loadComponent: () => 
+            import('./components/to-signal/to-signal-example/to-signal-example.component')
+            .then(c => c.ToSignalExampleComponent)
     }
 ];
