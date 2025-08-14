@@ -4,37 +4,37 @@ export const routes: Routes = [
     {
         path: '',
         loadComponent: () => 
-            import('./components/writeable-signal/writeable-signal-example/writeable-signal-example.component')
+            import('./components/writeable-signal/writeable-signal-example.component')
             .then(c => c.WriteableSignalExampleComponent)
     },
     {
         path: 'computed-signal',
         loadComponent: () => 
-            import('./components/computed-signal/computed-signal-example/computed-signal-example.component')
+            import('./components/computed-signal/computed-signal-example.component')
             .then(c => c.ComputedSignalExampleComponent)
     },
     {
         path: 'effect',
         loadComponent: () => 
-            import('./components/effect/effect-example/effect-example.component')
+            import('./components/effect/effect-example.component')
             .then(c => c.EffectExampleComponent)
     },
     {
         path: 'linked-signal',
         loadComponent: () => 
-            import('./components/linked-signal/linked-signal-example/linked-signal-example.component')
+            import('./components/linked-signal/linked-signal-example.component')
             .then(c => c.LinkedSignalExampleComponent)
     },
     {
         path: 'to-signal',
         loadComponent: () => 
-            import('./components/to-signal/to-signal-example/to-signal-example.component')
+            import('./components/to-signal/to-signal-example.component')
             .then(c => c.ToSignalExampleComponent)
     },
     {
         path: 'to-observable',
         loadComponent: () => 
-            import('./components/to-observable/to-observable-example/to-observable-example.component')
+            import('./components/to-observable/to-observable-example.component')
             .then(c => c.ToObservableExampleComponent)
     }
 ];
