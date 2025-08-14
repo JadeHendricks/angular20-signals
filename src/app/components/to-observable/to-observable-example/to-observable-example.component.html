@@ -1,0 +1,22 @@
+<header>
+    <h4>Angular | toObservable Demo</h4>
+    <p>You’d use toObservable whenever you need to bridge Angular signals into the RxJS world</p>
+    <p>You will need to manually unsubscribe to toObservable</p>
+</header>
+
+<section>
+    <h4>Counter with toObservable</h4>
+    <p>Here we are using the <strong>map operator</strong> to manipulate the data on each signal change with RXJS operators</p>
+    <p><strong>Count Signal</strong>: {{ count() }}</p>
+    <p><strong>Doubled using toObservable (via RxJS)</strong>: {{ doubled }}</p>
+    <button (click)="increment()">Increment CountSignal</button>
+</section>
+
+<section>
+    <h4>Search Users (signal → toObservable)</h4>
+    <p>toObservable(signal) is for when you want to pipe a Signal through RxJS operators (e.g., <strong>debounceTime</strong>, <strong>switchMap</strong>, <strong>combineLatest</strong>, etc.) or pass it to an API that expects an **Observable</p>
+    <input type="text" [value]="search()" (input)="updateSearch($any($event.target).value)" placeholder="Type a name..." />
+    <ul>
+    <li *ngFor="let user of results">{{ user.name }}</li>
+    </ul>
+</section>

@@ -30,5 +30,11 @@ export const routes: Routes = [
         loadComponent: () => 
             import('./components/to-signal/to-signal-example/to-signal-example.component')
             .then(c => c.ToSignalExampleComponent)
+    },
+    {
+        path: 'to-observable',
+        loadComponent: () => 
+            import('./components/to-observable/to-observable-example/to-observable-example.component')
+            .then(c => c.ToObservableExampleComponent)
     }
 ];
