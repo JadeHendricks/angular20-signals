@@ -1,0 +1,23 @@
+<header>
+    <h4>Angular | Output Signal</h4>
+    <p>Taking a look into the output signal and how it is used.</p>
+</header>
+
+<section>
+    <h4>Simple Output</h4>
+    <div class="section-data">
+        <p>Here we are binding the buttonclick signal to the onChildClick method</p>
+        <p>Works just like Output(), but cleaner. <strong>View Console</strong></p>
+    </div>
+    <app-output-child-example (buttonClicked)="onChildClick($event)"></app-output-child-example>
+</section>
+
+<section>
+    <h4>outputFromObservable()</h4>
+    <div class="section-data">
+        <p>Now let’s use an Observable (a timer) and expose it directly as an output.</p>
+        <p>View <strong>Console</strong> to see the caputring in the parent. (every 7 seconds)</p>
+    </div>
+    <app-output-child-second-example 
+        (tick)="onTick($event)"/>
+</section>

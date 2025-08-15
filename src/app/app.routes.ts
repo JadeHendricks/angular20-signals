@@ -43,4 +43,10 @@ export const routes: Routes = [
             import('./components/input/input-example/input-example.component')
             .then(c => c.InputExampleComponent)
     },
+    {
+        path: 'output',
+        loadComponent: () => 
+            import('./components/output/output-example/output-example.component')
+            .then(c => c.OutputExampleComponent)
+    },
 ];
