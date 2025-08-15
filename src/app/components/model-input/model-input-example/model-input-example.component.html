@@ -1,0 +1,31 @@
+<header>
+    <h4>Angular | Model Input</h4>
+    <p>Taking a look into the modelInput/Output and how it is used.</p>
+    <p>Please keep in mind as this is a replacement for <strong>[()]</strong> and is two-way data binding <strong>(parent > child) (child > parent)</strong></p>
+</header>
+
+<section>
+    <!-- 
+        (count)] in the parent is just Angular’s banana-in-a-box syntax for two-way binding. 
+        Input binding: passes parentCount down into the child’s count model.
+        Output binding: listens for countChange up from the child, and updates parentCount when it emits.
+    -->
+    <h4>Using the ModelInput</h4>
+    <div class="component-wrapper">
+        <app-model-input-child-example 
+            [(count)]="parentCount">
+        </app-model-input-child-example>
+    </div>
+    <p>Parent value: {{ parentCount }}</p>
+</section>
+
+<section>
+    <h4>Using two way syncing to update a toggle from the child to the parent</h4>
+    <p>This communication from child to parent again. (but really two way)</p>
+    <div class="component-wrapper">
+        <!-- Parent passes its darkMode value down to child via [checked].-->
+        <!-- Parent UI reacts automatically. Baed on the new signal update-->
+        <app-model-input-child-second-example [(checked)]="darkMode" />
+    </div>
+    <p>Dark mode is: {{ darkMode ? 'ON' : 'OFF' }}</p>
+</section>
