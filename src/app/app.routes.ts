@@ -36,5 +36,11 @@ export const routes: Routes = [
         loadComponent: () => 
             import('./components/to-observable/to-observable-example.component')
             .then(c => c.ToObservableExampleComponent)
-    }
+    },
+    {
+        path: 'input',
+        loadComponent: () => 
+            import('./components/input/input-example/input-example.component')
+            .then(c => c.InputExampleComponent)
+    },
 ];

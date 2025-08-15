@@ -1,0 +1,28 @@
+<header>
+    <h4>Angular | Input Signal</h4>
+    <p>Taking a look into the input signal and how it is used.</p>
+</header>
+
+<section>
+    <h4>Currency converter</h4>
+    <p>Uses the new input api in Angular to pass values as signals.</p>
+    <p>The Rate and Converted amount is then re-calculated in computed and automatically updated.</p>
+    <p>The Amount is in <strong>USD</strong>:</p>
+    <div class="currency-form">
+        <label>Amount</label>
+        <input type="number" [formControl]="amount" />
+
+        <label>Currency</label>
+        <select [formControl]="currency">
+            @for(option of curriencies; track option) {
+                <option value="{{option}}">{{option}}</option>
+            }
+        </select>
+    </div>
+</section>
+
+<section>
+    <app-input-child-example 
+    [amount]="amount.value!" 
+    [currency]="currency.value!" />
+</section>
