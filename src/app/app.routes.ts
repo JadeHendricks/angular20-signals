@@ -19,12 +19,12 @@ export const routes: Routes = [
             import('./components/effect/effect-example.component')
             .then(c => c.EffectExampleComponent)
     },
-    {
-        path: 'linked-signal',
-        loadComponent: () => 
-            import('./components/linked-signal/linked-signal-example.component')
-            .then(c => c.LinkedSignalExampleComponent)
-    },
+  {
+    path: 'linked-signal',
+    loadComponent: () =>
+      import('./components/linked-signal/linked-signal-example.component')
+        .then(m => m.LinkedSignalExampleComponent),
+  },
     {
         path: 'to-signal',
         loadComponent: () => 

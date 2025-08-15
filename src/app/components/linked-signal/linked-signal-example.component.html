@@ -1,1 +1,37 @@
-<p>linked-signal-example works!</p>
+<header>
+    <h4>Angular | Linked Signal</h4>
+    <p>Taking a look into signal, what it does and why it's useful</p>
+    <p>creates a writable value that is also derived from another signal and auto-resets when that source changes.</p>
+</header>
+
+<section>
+    <h4>Why we need linkedSignal here (and what others can’t do)</h4>
+    <p>
+        A plain <strong>signal</strong> for <strong>selectedId</strong> is writable, 
+        but it won’t react when <strong>options</strong> changes—you’d need extra <strong>effect()</strong> code to check validity and reset. 
+        That’s more boilerplate and easy to forget in edge cases.
+    </p>
+    <p>
+        A <strong>computed</strong> value can auto-derive a selection from <strong>options</strong> (e.g., “always first option”), but it’s read-only—the user can’t set their choice.
+    </p>
+    <p>
+        <strong>linkedSignal</strong> combines both: <br>
+        User-writable (so the UI can set <strong>selectedId</strong> directly).
+        Auto-resetting when <strong>source</strong> changes (so you don’t end up with an invalid selection).
+    </p>
+    <p>
+        In short, <strong>linkedSignal</strong> was designed for exactly this class of problems: user-writable state that must remain consistent with a changing source—keeping the old value if still valid, 
+        or falling back deterministically when not.
+    </p>
+    <select
+    [value]="selectedId()"
+    (change)="selectedId.set(+($any($event.target).value))">
+    <option *ngFor="let opt of options()" [value]="opt.id">
+        {{ opt.name }}
+    </option>
+    </select>
+
+    <p>You selected: {{ selectedId() }}</p>
+
+    <button (click)="swapOptions()">Swap Options</button>
+</section>
